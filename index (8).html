@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliance Made Simple: Building Safer Classrooms</title>
+<meta name="description" content="Free, engaging, accessible resources to help teachers, grades 4–8 students, and families build safe, compliant classrooms.">
+<style>
+:root{
+  --bg:#fcfcff; --fg:#111827;
+  --lav:#a78bfa; --royal:#3b82f6; --pink:#ec4899; --gold:#f59e0b; --teal:#14b8a6;
+  --card:#ffffff; --border:#e5e7eb; --muted:#f5f3ff; --shadow:0 10px 24px rgba(17,17,17,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;line-height:1.6}
+a{color:#1d4ed8}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;padding:.5rem .8rem;border-radius:.5rem;z-index:1000;box-shadow:var(--shadow)}
+header.hero{background:
+  radial-gradient(1000px 360px at 15% -10%, rgba(167,139,250,.35) 0, transparent 60%),
+  radial-gradient(800px 260px at 85% -10%, rgba(59,130,246,.25) 0, transparent 60%),
+  linear-gradient(90deg, rgba(167,139,250,.18), rgba(59,130,246,.14), rgba(236,72,153,.18));
+  border-bottom:1px solid var(--border);
+}
+.brand{display:flex;gap:.75rem;align-items:center}
+.logo{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:12px;background:#4c1d95;color:#fff;box-shadow:var(--shadow)}
+.logo svg{width:28px;height:28px}
+h1{margin:.25rem 0 0 0}
+nav.primary{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:.75rem 0}
+nav.primary a{display:inline-block;padding:.55rem .9rem;border-radius:999px;text-decoration:none;color:var(--fg);background:#fff;box-shadow:var(--shadow);border:1px solid var(--border)}
+nav.primary a:hover, nav.primary a:focus{outline:3px solid var(--royal);outline-offset:2px}
+#contrast{margin-left:auto}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--lav),var(--royal));color:#fff;border:none;border-radius:999px;padding:.65rem 1rem;font-weight:700;box-shadow:var(--shadow);text-decoration:none;cursor:pointer}
+.btn-outline{background:transparent;border:2px solid var(--lav);color:#4c1d95}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1rem;box-shadow:var(--shadow);margin:.75rem 0}
+.kicker{letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#6b7280;font-size:.8rem;display:inline-block;border-bottom:4px solid var(--royal);padding-bottom:.2rem}
+.grid-2{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.notice{padding:.8rem;background:#fffbeb;border:1px solid #fde68a;border-radius:.8rem}
+footer{border-top:1px solid var(--border);background:var(--muted);padding:1rem 0;margin-top:2rem}
+/* Block diagram */
+.board{margin:1rem 0 2rem 0}
+.board .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-top:1rem}
+.node{background:#fff;border-radius:.9rem;border:2px solid #c7d2fe;box-shadow:var(--shadow);padding:.9rem 1rem;text-align:center}
+.node a{display:block;color:#0f172a;text-decoration:none;font-weight:800}
+.node a:focus{outline:3px solid var(--gold);outline-offset:3px}
+.node .sub{margin-top:.6rem;display:grid;gap:.6rem}
+.node .sub a{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:.7rem;padding:.6rem}
+.node.training{border-color:#fda4af;background:#fff1f2}
+.node.training .sub a{background:#ffe4e6}
+.node.copyright{border-color:#bbf7d0;background:#f0fdf4}
+.node.copyright .sub a{background:#dcfce7}
+.node.contact{border-color:#e9d5ff;background:#faf5ff}
+.node.contact .sub a{background:#f3e8ff}
+/* Posters */
+.poster{border:1px solid var(--border);border-radius:.75rem;box-shadow:var(--shadow)}
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero" role="banner">
+  <div class="container">
+    <div class="brand" role="img" aria-label="Shield logo with open book">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3l8 3v6c0 4.5-3 7.5-8 9-5-1.5-8-4.5-8-9V6l8-3z"/>
+          <path d="M7 10c2-1 4-1 5 0 1-1 3-1 5 0"/>
+        </svg>
+      </span>
+      <div>
+        <h1>Compliance Made Simple: Building Safer Classrooms</h1>
+        <p class="kicker" aria-label="Audience">Teachers • Grades 4–8 • Parents</p>
+      </div>
+      <button id="contrast" class="btn-outline" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
+    </div>
+
+    <nav class="primary" aria-label="Primary">
+      <a href="#training">Training</a>
+      <a href="#video">Video</a>
+      <a href="#games">Games</a>
+      <a href="#posters">Posters</a>
+      <a href="#parents">Parent Tips</a>
+      <a href="#resources">Resources</a>
+      <a href="#copyright">Copyright</a>
+      <a href="#about">About / Resume</a>
+      <a href="#contact">Contact</a>
+      <a href="#sitemap">Sitemap</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <main id="main" tabindex="-1">
+    <section class="card" id="home">
+      <p class="kicker">Mission</p>
+      <p>Provide a free, engaging, and accessible resource that supports teachers, students, and parents in building safe and compliant classrooms.</p>
+      <div class="grid-3">
+        <div class="card"><h3>Learning Objectives</h3><ul>
+          <li>Identify compliance rules</li><li>Apply classroom strategies</li>
+          <li>Demonstrate safe practices</li><li>Reflect on personal responsibility</li>
+        </ul></div>
+        <div class="card"><h3>Needs Analysis</h3><p>Classrooms need clear expectations, student ownership, and family partnership. This site curates ready‑to‑use examples and tools.</p></div>
+        <div class="card"><h3>Assessment</h3><p>Short quizzes, role‑play evaluations, and reflection activities guide continuous improvement.</p></div>
+      </div>
+    </section>
+
+    <!-- Block Diagram Homepage -->
+    <section class="board" aria-labelledby="map-title">
+      <h2 id="map-title" class="kicker">Homepage Map</h2>
+      <div class="node" style="margin:0 auto;max-width:320px;background:#e0e7ff">
+        <a href="#home" aria-label="Go to Home section">Home Page</a>
+      </div>
+      <div class="grid" role="list" aria-label="Homepage sections">
+        <div class="node training" role="listitem">
+          <a href="#training">Training Page</a>
+          <div class="sub">
+            <a href="#bia">Be Internet Awesome</a>
+            <a href="#esafety">eSafety for Kids</a>
+            <a href="#netsmartz">NetSmartz (NCMEC)</a>
+            <a href="#sharemylesson">Share My Lesson – Safety</a>
+            <a href="#curriki">CurrikiStudio</a>
+            <a href="#kidpower">Kidpower International</a>
+          </div>
+        </div>
+        <div class="node copyright" role="listitem">
+          <a href="#copyright">Copyright Information Page</a>
+          <div class="sub">
+            <a href="#usco">U.S. Copyright Office</a>
+            <a href="#stanford">Stanford Fair Use Center</a>
+            <a href="#cc">Creative Commons</a>
+            <a href="#oer">OER Commons</a>
+          </div>
+        </div>
+        <div class="node contact" role="listitem">
+          <a href="#contact">Contact Information Page</a>
+          <div class="sub">
+            <a href="#about">Resume (Web Bio)</a>
+            <a href="#about">About Me / Professional Info</a>
+            <a href="#parents">Safety Tips for Parents</a>
+            <a href="#posters">Classroom Posters & Printables</a>
+            <a href="#emergency">Emergency Preparedness</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training -->
+    <section class="card" id="training">
+      <h2>Training Session: Understanding Compliance in the Classroom</h2>
+      <ol>
+        <li><strong>Introduction (10):</strong> Welcome, objectives, quick poll.</li>
+        <li><strong>Why Compliance Matters (15):</strong> Definition, examples, demo video.</li>
+        <li><strong>Interactive (20):</strong> Role‑plays and guided reflection.</li>
+        <li><strong>Strategies (20):</strong> Teacher clarity, positive reinforcement, restorative moves; student norms; family partnership.</li>
+        <li><strong>Assessment & Feedback (15):</strong> Short quiz, “One strategy I will implement…”, group share.</li>
+        <li><strong>Closing (10):</strong> Recap and resources.</li>
+      </ol>
+      <div class="grid-3">
+        <div class="card" id="bia"><h3>Be Internet Awesome</h3><p>Interactive digital citizenship curriculum and games.</p><p><a class="btn btn-outline" href="https://beinternetawesome.withgoogle.com" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card" id="esafety"><h3>eSafety for Kids</h3><p>Lesson packs, worksheets, facilitation guides.</p><p><a class="btn btn-outline" href="https://cool.org/esafety-for-kids-education-resources" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card" id="netsmartz"><h3>NetSmartz (NCMEC)</h3><p>Videos, comics, and activities about online safety.</p><p><a class="btn btn-outline" href="https://www.missingkids.org/netsmartz/resources" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card" id="sharemylesson"><h3>Share My Lesson – Safety</h3><p>Teacher‑created lessons and PD on safety.</p><p><a class="btn btn-outline" href="https://sharemylesson.com/subject/injury-prevention-and-safety" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card" id="curriki"><h3>CurrikiStudio</h3><p>Tools for interactive digital lessons.</p><p><a class="btn btn-outline" href="https://www.curriki.org" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card" id="kidpower"><h3>Kidpower International</h3><p>Personal safety & boundary setting.</p><p><a class="btn btn-outline" href="https://kidpower.org" target="_blank" rel="noopener">Open</a></p></div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="card" id="video">
+      <h2>Demo Training Video (CC BY 3.0)</h2>
+      <p class="notice">If your network blocks embeds, open the source link below.</p>
+      <iframe src="https://archive.org/embed/youtube-VGCJUQhuXZE" width="100%" height="480" frameborder="0" allowfullscreen title="Stop Bullying – Episode 1 (Archive.org)"></iframe>
+      <p><a class="btn btn-outline" href="https://www.stopbullying.gov" target="_blank" rel="noopener">Explore StopBullying.gov</a></p>
+      <p class="kicker">Attribution</p><p>“Stop Bullying – Episode 1” (PublicResourceOrg / HHS), Creative Commons Attribution 3.0. Source: Internet Archive listing.</p>
+    </section>
+
+    <!-- Games -->
+    <section class="card" id="games" aria-labelledby="games-title">
+      <h2 id="games-title">Games & Interactive Practice</h2>
+      <div class="grid-2">
+        <div class="card" role="region" aria-labelledby="g1-title">
+          <h3 id="g1-title">Safety Scenario Challenge</h3>
+          <p id="g1-q" class="kicker">Press Start</p>
+          <div id="g1-choices"></div>
+          <p><button class="btn" id="g1-next">Start</button> <span class="kicker" id="g1-score" aria-live="polite">Score: 0/0</span></p>
+        </div>
+
+        <div class="card" role="region" aria-labelledby="g2-title">
+          <h3 id="g2-title">Match the Rule</h3>
+          <ol>
+            <li>Class photo day:
+              <label class="sr-only" for="g2a">Select a rule</label>
+              <select id="g2a">
+                <option value="">— Select —</option>
+                <option>Ask for consent before sharing images</option>
+                <option>Run to get in the front row</option>
+                <option>Skip the photo to save time</option>
+              </select>
+            </li>
+            <li>Hallway transition:
+              <label class="sr-only" for="g2b">Select a rule</label>
+              <select id="g2b">
+                <option value="">— Select —</option>
+                <option>Walk, keep hands to yourself</option>
+                <option>Race your friends</option>
+                <option>Shout to be heard</option>
+              </select>
+            </li>
+            <li>Group project research:
+              <label class="sr-only" for="g2c">Select a rule</label>
+              <select id="g2c">
+                <option value="">— Select —</option>
+                <option>Copy images without credit</option>
+                <option>Use open-licensed media and give attribution</option>
+                <option>Use any logo because it's for school</option>
+              </select>
+            </li>
+          </ol>
+          <p><button class="btn" id="g2-check" type="button">Check</button> <span id="g2out" class="kicker" aria-live="polite"></span></p>
+        </div>
+
+        <div class="card" role="region" aria-labelledby="g3-title">
+          <h3 id="g3-title">Reflection Spinner</h3>
+          <p><button class="btn" id="spinBtn">Spin Prompt</button></p>
+          <p id="spinOut" class="notice" aria-live="polite">Press “Spin Prompt”.</p>
+        </div>
+
+        <div class="card" role="region" aria-labelledby="g4-title">
+          <h3 id="g4-title">Find the Safe Choice (30s)</h3>
+          <p><strong>Time:</strong> <span id="tg-time" aria-live="polite">30</span>s · <strong>Score:</strong> <span id="tg-score" aria-live="polite">0</span></p>
+          <p id="tg-q" class="kicker">Press Start</p>
+          <div id="tg-choices"></div>
+          <p><button class="btn" id="tg-start">Start</button></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posters -->
+    <section class="card" id="posters">
+      <h2>Classroom Posters & Printables</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Our Safety Norms</h3>
+          <svg class="poster" viewBox="0 0 700 990" role="img" aria-label="Poster: Safety Norms">
+            <rect width="700" height="990" fill="#ede9fe"/><rect width="700" height="120" fill="#8b5cf6"/>
+            <text x="24" y="80" fill="#fff" font-size="42" font-family="Arial" font-weight="700">Compliance Made Simple</text>
+            <text x="24" y="170" font-size="48" font-family="Arial" font-weight="700">Our Safety Norms</text>
+            <g font-size="28" font-family="Arial">
+              <text x="24" y="240">• Hands to self; walk, don’t run</text>
+              <text x="24" y="290">• Use kind words; report hurtful behavior</text>
+              <text x="24" y="340">• Keep aisles clear; backpacks under desks</text>
+              <text x="24" y="390">• Ask before sharing photos or names</text>
+              <text x="24" y="440">• Follow drill directions calmly</text>
+            </g>
+          </svg>
+          <p class="notice">Print tip: use browser Print → Portrait → 100% scale.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Citizenship</h3>
+          <svg class="poster" viewBox="0 0 700 990" role="img" aria-label="Poster: Digital Citizenship">
+            <rect width="700" height="990" fill="#eff6ff"/><rect width="700" height="120" fill="#3b82f6"/>
+            <text x="24" y="80" fill="#fff" font-size="42" font-family="Arial" font-weight="700">Compliance Made Simple</text>
+            <text x="24" y="170" font-size="48" font-family="Arial" font-weight="700">Digital Citizenship</text>
+            <g font-size="28" font-family="Arial">
+              <text x="24" y="240">• Protect passwords and personal info</text>
+              <text x="24" y="290">• Think before posting; get consent</text>
+              <text x="24" y="340">• Use open‑licensed media with credit</text>
+              <text x="24" y="390">• Report bullying; keep evidence</text>
+              <text x="24" y="440">• Balance screen time with breaks</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent Tips -->
+    <section class="card" id="parents">
+      <h2>Safety Tips for Parents</h2>
+      <ul>
+        <li>Ask daily: “What does a safe classroom feel like?” Share one example.</li>
+        <li>Review device privacy settings together.</li>
+        <li>Practice a bullying response plan (who to tell, what to say).</li>
+        <li>Keep two emergency contact numbers in the backpack.</li>
+        <li>Use Creative Commons/open resources and model attribution.</li>
+      </ul>
+      <p><a class="btn btn-outline" href="javascript:window.print()">Print All Tips</a></p>
+    </section>
+
+    <!-- Resources -->
+    <section class="card" id="resources">
+      <h2>Trusted Resources</h2>
+      <div class="grid-2">
+        <div class="card"><h3>Edutopia</h3><p>Classroom norms & management.</p><p><a class="btn btn-outline" href="https://www.edutopia.org" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card"><h3>National Education Association</h3><p>Curated educator resources.</p><p><a class="btn btn-outline" href="https://www.nea.org" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card"><h3>StopBullying.gov</h3><p>Prevention guides & reporting.</p><p><a class="btn btn-outline" href="https://www.stopbullying.gov" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card"><h3>CDC Healthy Schools</h3><p>Evidence‑based health & safety content.</p><p><a class="btn btn-outline" href="https://www.cdc.gov/healthyschools" target="_blank" rel="noopener">Open</a></p></div>
+        <div class="card"><h3>OER Commons</h3><p>Open‑licensed lesson materials.</p><p><a class="btn btn-outline" href="https://www.oercommons.org" target="_blank" rel="noopener">Open</a></p></div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <section class="card" id="copyright">
+      <h2>Copyright & Fair Use</h2>
+      <p>Prefer royalty‑free or Creative Commons media and give proper attribution.</p>
+      <ul>
+        <li><a id="usco" href="https://www.copyright.gov" target="_blank" rel="noopener">U.S. Copyright Office</a></li>
+        <li><a id="stanford" href="https://fairuse.stanford.edu" target="_blank" rel="noopener">Stanford Fair Use Center</a></li>
+        <li><a id="cc" href="https://creativecommons.org" target="_blank" rel="noopener">Creative Commons</a></li>
+        <li><a id="oer" href="https://www.oercommons.org" target="_blank" rel="noopener">OER Commons</a></li>
+      </ul>
+    </section>
+
+    <!-- About / Resume -->
+    <section class="card" id="about">
+      <h2>About Me / Resume (Web Bio)</h2>
+      <p><strong>Patrice Hamblin</strong> — Compliance Control Supervisor at Nissan Canton ILC; former Stamping Scheduling Manager at Nissan Canton Automotive Plant. M.S., Executive Leadership (Liberty University); M.S., Curriculum, Instruction & Technology (NSU, in progress); B.A., English (Mississippi Valley State University).</p>
+      <p>Purpose‑driven leader blending safety compliance with instructional best practices to help teachers, students, and families build safer classrooms.</p>
+      <ul>
+        <li>Strengths: training content development, compliance awareness, process improvement, and continuous learning.</li>
+        <li>Personal: mom to Ahzariah (“Mook”) and Ahzavius (“Za”); loves music, cooking, reading, travel; favorite colors include lavender, emerald, royal blue, and pink.</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <form onsubmit="event.preventDefault(); document.getElementById('thanks').hidden=false;">
+        <label for="name">Name</label><br>
+        <input id="name" required style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.6rem"><br><br>
+        <label for="msg">Message</label><br>
+        <textarea id="msg" rows="5" required style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.6rem"></textarea><br><br>
+        <button class="btn">Send</button>
+        <span id="thanks" class="kicker" hidden aria-live="polite">Thanks—message noted for this demo.</span>
+      </form>
+    </section>
+
+    <!-- Emergency -->
+    <section class="card" id="emergency">
+      <h2>Emergency Preparedness</h2>
+      <ul>
+        <li>Review drill procedures (fire, lockdown, severe weather).</li>
+        <li>Maintain updated rosters and medical info.</li>
+        <li>Identify reunification points and contacts.</li>
+      </ul>
+    </section>
+
+    <!-- Sitemap -->
+    <section class="card" id="sitemap">
+      <h2>Sitemap</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#training">Training Page</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#posters">Classroom Posters & Printables</a></li>
+        <li><a href="#parents">Safety Tips for Parents</a></li>
+        <li><a href="#resources">Trusted Resources</a></li>
+        <li><a href="#copyright">Copyright Information</a></li>
+        <li><a href="#about">About / Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#emergency">Emergency Preparedness</a></li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <p>© 2025 Patrice Hamblin • Educational draft. External resources linked to official sites and CC‑friendly materials.</p>
+  </div>
+</footer>
+
+<script>
+// High-contrast toggle
+const contrastBtn=document.getElementById('contrast');
+contrastBtn?.addEventListener('click', ()=>{
+  const on=document.body.classList.toggle('contrast');
+  contrastBtn.setAttribute('aria-pressed', on?'true':'false');
+  document.body.style.filter = on ? 'contrast(1.25) saturate(1.1)' : '';
+});
+
+// Game 1: Safety Scenario Challenge
+(function(){
+  const qs=[
+    {q:"You see teasing in a class group chat. First step?", a:["Share it to warn others","Report it and support the peer","Ignore it"], right:1},
+    {q:"Backpacks block the aisle. Safest action?", a:["Step over them","Move them under desks","Wait until dismissal"], right:1},
+    {q:"Need an image for a project. What’s okay?", a:["Any pic from the web","Open‑licensed with credit","Screenshot a logo"], right:1}
+  ];
+  let i=-1, score=0;
+  const qEl=document.getElementById('g1-q');
+  const cEl=document.getElementById('g1-choices');
+  const sEl=document.getElementById('g1-score');
+  const btn=document.getElementById('g1-next');
+  function render(){
+    i++;
+    if(i>=qs.length){ qEl.textContent="Nice work! Game complete."; cEl.innerHTML=""; btn.textContent="Restart"; i=-1; return; }
+    const cur=qs[i]; qEl.textContent=cur.q; cEl.innerHTML="";
+    cur.a.forEach((t,idx)=>{
+      const b=document.createElement('button'); b.className='btn btn-outline'; b.type='button'; b.textContent=t;
+      b.addEventListener('click',()=>{ if(idx===cur.right){ score++; b.textContent='✓ '+t; } else { b.textContent='✗ '+t; }
+        sEl.textContent=`Score: ${score}/${i+1}`; Array.from(cEl.querySelectorAll('button')).forEach(x=>x.disabled=true); });
+      cEl.appendChild(b); cEl.appendChild(document.createElement('br'));
+    });
+    btn.textContent = i===-1 ? "Start" : "Next";
+  }
+  btn.addEventListener('click', ()=>{ if(i===-1){ score=0; sEl.textContent='Score: 0/0'; } render(); });
+})();
+
+// Game 2: Match the Rule
+(function(){
+  const correct=["Ask for consent before sharing images","Walk, keep hands to yourself","Use open-licensed media and give attribution"];
+  document.getElementById('g2-check')?.addEventListener('click', ()=>{
+    const a=[g2a.value,g2b.value,g2c.value]; let right=0; for(let j=0;j<3;j++){ if(a[j]===correct[j]) right++; }
+    g2out.textContent = `You matched ${right}/3.`;
+  });
+})();
+
+// Game 3: Reflection Spinner
+(function(){
+  const prompts=["One rule I will model today is…","A time I showed responsibility was…","A safe choice during transitions is…","One way to support a peer kindly is…","If I see cyberbullying, I will…"];
+  document.getElementById('spinBtn')?.addEventListener('click', ()=>{
+    const pick=prompts[Math.floor(Math.random()*prompts.length)];
+    spinOut.textContent=pick;
+  });
+})();
+
+// Game 4: 30‑second Safe Choice Sprint
+(function(){
+  const data=[
+    {q:"Spill in the hallway.", a:["Walk around & tell an adult","Run through quickly","Ignore it"], right:0},
+    {q:"Friend asks for your password.", a:["Share it","Use a manager & keep it private","Write it on a sticky note"], right:1},
+    {q:"Drill begins and class is noisy.", a:["Keep chatting","Follow directions and stay quiet","Ask to leave"], right:1}
+  ];
+  let score=0,i=0,time=30,tick=null;
+  const q=document.getElementById('tg-q'), c=document.getElementById('tg-choices'), t=document.getElementById('tg-time'), s=document.getElementById('tg-score'), btn=document.getElementById('tg-start');
+  function end(msg){ clearInterval(tick); tick=null; q.textContent=msg+` Final score: ${score}.`; c.innerHTML=""; btn.disabled=false; btn.textContent='Restart'; }
+  function render(){ if(i>=data.length){ end("Great job!"); return; } const cur=data[i]; q.textContent=cur.q; c.innerHTML=''; cur.a.forEach((text,idx)=>{ const b=document.createElement('button'); b.className='btn btn-outline'; b.textContent=text; b.addEventListener('click',()=>{ if(idx===cur.right){score++; s.textContent=''+score;} i++; render(); }); c.appendChild(b); c.appendChild(document.createElement('br')); }); }
+  btn.addEventListener('click', ()=>{ score=0;i=0;time=30;s.textContent='0';t.textContent=time;btn.disabled=true;btn.textContent='Running…';render(); if(tick) clearInterval(tick); tick=setInterval(()=>{ time--; t.textContent=time; if(time<=0) end('Time!'); },1000); });
+})();
+</script>
+
+</body>
+</html>
